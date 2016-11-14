@@ -1,0 +1,12 @@
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\bin\Debug\TEAM6_CMART.exe.config
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.csprojResolveAssemblyReference.cache
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.Manage_Accounts.GUI_LOGIN.resources
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.Properties.Resources.resources
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.csproj.GenerateResource.Cache
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\bin\Debug\TEAM6_CMART.exe
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\bin\Debug\TEAM6_CMART.pdb
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\bin\Debug\EntityFramework.dll
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\bin\Debug\EntityFramework.xml
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.exe
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.pdb
+F:\Hoc tap\NAM 3\CMART\TEAM6_CMART\TEAM6_CMART\obj\Debug\TEAM6_CMART.GUI_MAIN.resources

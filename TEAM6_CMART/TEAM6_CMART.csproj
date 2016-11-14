@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{901966D2-E5BE-4910-B957-3C5FA6E2830D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TEAM6_CMART</RootNamespace>
+    <AssemblyName>TEAM6_CMART</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACCOUNT.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BILL.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BILL_DETAIL.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\BUS_ACCOUNT.cs" />
+    <Compile Include="Cmart6.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cmart6.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cmart6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cmart6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cmart6.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\GUI_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\GUI_MAIN.Designer.cs">
+      <DependentUpon>GUI_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORICAL_PRICE.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORTED_COUPON_BR.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORTED_COUPON_BR_DETAIL.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORTED_COUPON_HQ.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORTED_COUPON_HQ_DETAIL.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN FORM\GUI_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN FORM\GUI_LOGIN.Designer.cs">
+      <DependentUpon>GUI_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCT.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCT_TYPE.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="PROMO_INFO.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PROPOSED_IMPORT_COUPON.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROPOSED_IMPORT_COUPON_DETAIL.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TestTable.cs">
+      <DependentUpon>Cmart6.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORMS\GUI_MAIN.resx">
+      <DependentUpon>GUI_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN FORM\GUI_LOGIN.resx">
+      <DependentUpon>GUI_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Cmart6.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Cmart6.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Cmart6.edmx.diagram">
+      <DependentUpon>Cmart6.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cmart6.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Cmart6.edmx</DependentUpon>
+      <LastGenOutput>Cmart6.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Cmart6.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Cmart6.edmx</DependentUpon>
+      <LastGenOutput>Cmart6.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\GUI_LOGIN1.png" />
+    <None Include="Resources\GUI_Password.ico" />
+    <None Include="Resources\GUI_LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

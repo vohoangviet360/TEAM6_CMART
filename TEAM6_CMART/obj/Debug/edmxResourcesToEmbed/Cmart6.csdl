@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMART6Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CMART6Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ACCOUNTs" EntityType="CMART6Model.ACCOUNT" />
+    <EntitySet Name="BILLs" EntityType="CMART6Model.BILL" />
+    <EntitySet Name="BILL_DETAIL" EntityType="CMART6Model.BILL_DETAIL" />
+    <EntitySet Name="HISTORICAL_PRICE" EntityType="CMART6Model.HISTORICAL_PRICE" />
+    <EntitySet Name="IMPORTED_COUPON_BR" EntityType="CMART6Model.IMPORTED_COUPON_BR" />
+    <EntitySet Name="IMPORTED_COUPON_BR_DETAIL" EntityType="CMART6Model.IMPORTED_COUPON_BR_DETAIL" />
+    <EntitySet Name="IMPORTED_COUPON_HQ" EntityType="CMART6Model.IMPORTED_COUPON_HQ" />
+    <EntitySet Name="IMPORTED_COUPON_HQ_DETAIL" EntityType="CMART6Model.IMPORTED_COUPON_HQ_DETAIL" />
+    <EntitySet Name="PRODUCTs" EntityType="CMART6Model.PRODUCT" />
+    <EntitySet Name="PRODUCT_TYPE" EntityType="CMART6Model.PRODUCT_TYPE" />
+    <EntitySet Name="PROMO_INFO" EntityType="CMART6Model.PROMO_INFO" />
+    <EntitySet Name="PROPOSED_IMPORT_COUPON" EntityType="CMART6Model.PROPOSED_IMPORT_COUPON" />
+    <EntitySet Name="PROPOSED_IMPORT_COUPON_DETAIL" EntityType="CMART6Model.PROPOSED_IMPORT_COUPON_DETAIL" />
+    <EntitySet Name="SUPPLIERs" EntityType="CMART6Model.SUPPLIER" />
+    <EntitySet Name="sysdiagrams" EntityType="CMART6Model.sysdiagram" />
+    <EntitySet Name="TestTables" EntityType="CMART6Model.TestTable" />
+    <AssociationSet Name="FK_BILL_ACCOUNT" Association="CMART6Model.FK_BILL_ACCOUNT">
+      <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+      <End Role="BILL" EntitySet="BILLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_BR_ACCOUNT" Association="CMART6Model.FK_IMPORTED_COUPON_BR_ACCOUNT">
+      <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+      <End Role="IMPORTED_COUPON_BR" EntitySet="IMPORTED_COUPON_BR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_HQ_ACCOUNT" Association="CMART6Model.FK_IMPORTED_COUPON_HQ_ACCOUNT">
+      <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+      <End Role="IMPORTED_COUPON_HQ" EntitySet="IMPORTED_COUPON_HQ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPOSED_IMPORT_COUPON_ACCOUNT" Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_ACCOUNT">
+      <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+      <End Role="PROPOSED_IMPORT_COUPON" EntitySet="PROPOSED_IMPORT_COUPON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BILL_DETAIL_BILL" Association="CMART6Model.FK_BILL_DETAIL_BILL">
+      <End Role="BILL" EntitySet="BILLs" />
+      <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BILL_DETAIL_PRODUCT" Association="CMART6Model.FK_BILL_DETAIL_PRODUCT">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HISTORICAL_PRICE_PRODUCT" Association="CMART6Model.FK_HISTORICAL_PRICE_PRODUCT">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="HISTORICAL_PRICE" EntitySet="HISTORICAL_PRICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_BR_DETAIL_IMPORTED_COUPON_BR" Association="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_IMPORTED_COUPON_BR">
+      <End Role="IMPORTED_COUPON_BR" EntitySet="IMPORTED_COUPON_BR" />
+      <End Role="IMPORTED_COUPON_BR_DETAIL" EntitySet="IMPORTED_COUPON_BR_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_BR_IMPORTED_COUPON_HQ" Association="CMART6Model.FK_IMPORTED_COUPON_BR_IMPORTED_COUPON_HQ">
+      <End Role="IMPORTED_COUPON_HQ" EntitySet="IMPORTED_COUPON_HQ" />
+      <End Role="IMPORTED_COUPON_BR" EntitySet="IMPORTED_COUPON_BR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_BR_DETAIL_PRODUCT" Association="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_PRODUCT">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="IMPORTED_COUPON_BR_DETAIL" EntitySet="IMPORTED_COUPON_BR_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_HQ_DETAIL_IMPORTED_COUPON_HQ" Association="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_IMPORTED_COUPON_HQ">
+      <End Role="IMPORTED_COUPON_HQ" EntitySet="IMPORTED_COUPON_HQ" />
+      <End Role="IMPORTED_COUPON_HQ_DETAIL" EntitySet="IMPORTED_COUPON_HQ_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_HQ_PROPOSED_IMPORT_COUPON" Association="CMART6Model.FK_IMPORTED_COUPON_HQ_PROPOSED_IMPORT_COUPON">
+      <End Role="PROPOSED_IMPORT_COUPON" EntitySet="PROPOSED_IMPORT_COUPON" />
+      <End Role="IMPORTED_COUPON_HQ" EntitySet="IMPORTED_COUPON_HQ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMPORTED_COUPON_HQ_DETAIL_PRODUCT" Association="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_PRODUCT">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="IMPORTED_COUPON_HQ_DETAIL" EntitySet="IMPORTED_COUPON_HQ_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCT_PRODUCT_TYPE" Association="CMART6Model.FK_PRODUCT_PRODUCT_TYPE">
+      <End Role="PRODUCT_TYPE" EntitySet="PRODUCT_TYPE" />
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCT_SUPPLIER" Association="CMART6Model.FK_PRODUCT_SUPPLIER">
+      <End Role="SUPPLIER" EntitySet="SUPPLIERs" />
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROMO_INFO_PRODUCT" Association="CMART6Model.FK_PROMO_INFO_PRODUCT">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="PROMO_INFO" EntitySet="PROMO_INFO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPOSED_IMPORT_COUPON_DETAIL_PRODUCT" Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PRODUCT">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="PROPOSED_IMPORT_COUPON_DETAIL" EntitySet="PROPOSED_IMPORT_COUPON_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPOSED_IMPORT_COUPON_DETAIL_PROPOSED_IMPORT_COUPON" Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PROPOSED_IMPORT_COUPON">
+      <End Role="PROPOSED_IMPORT_COUPON" EntitySet="PROPOSED_IMPORT_COUPON" />
+      <End Role="PROPOSED_IMPORT_COUPON_DETAIL" EntitySet="PROPOSED_IMPORT_COUPON_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPOSED_IMPORT_COUPON_SUPPLIER" Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_SUPPLIER">
+      <End Role="SUPPLIER" EntitySet="SUPPLIERs" />
+      <End Role="PROPOSED_IMPORT_COUPON" EntitySet="PROPOSED_IMPORT_COUPON" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="house" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="street" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="township" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="mobilephone" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="idcard" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="permission" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="BILLs" Relationship="CMART6Model.FK_BILL_ACCOUNT" FromRole="ACCOUNT" ToRole="BILL" />
+    <NavigationProperty Name="IMPORTED_COUPON_BR" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_ACCOUNT" FromRole="ACCOUNT" ToRole="IMPORTED_COUPON_BR" />
+    <NavigationProperty Name="IMPORTED_COUPON_HQ" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_ACCOUNT" FromRole="ACCOUNT" ToRole="IMPORTED_COUPON_HQ" />
+    <NavigationProperty Name="PROPOSED_IMPORT_COUPON" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_ACCOUNT" FromRole="ACCOUNT" ToRole="PROPOSED_IMPORT_COUPON" />
+  </EntityType>
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="accountid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="pos" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="totalprice" Type="Int32" Nullable="false" />
+    <Property Name="totalamount" Type="Int32" Nullable="false" />
+    <Property Name="cusprice" Type="Int32" Nullable="false" />
+    <Property Name="rejectprice" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ACCOUNT" Relationship="CMART6Model.FK_BILL_ACCOUNT" FromRole="BILL" ToRole="ACCOUNT" />
+    <NavigationProperty Name="BILL_DETAIL" Relationship="CMART6Model.FK_BILL_DETAIL_BILL" FromRole="BILL" ToRole="BILL_DETAIL" />
+  </EntityType>
+  <EntityType Name="BILL_DETAIL">
+    <Key>
+      <PropertyRef Name="billid" />
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="billid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="productid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BILL" Relationship="CMART6Model.FK_BILL_DETAIL_BILL" FromRole="BILL_DETAIL" ToRole="BILL" />
+    <NavigationProperty Name="PRODUCT" Relationship="CMART6Model.FK_BILL_DETAIL_PRODUCT" FromRole="BILL_DETAIL" ToRole="PRODUCT" />
+  </EntityType>
+  <EntityType Name="HISTORICAL_PRICE">
+    <Key>
+      <PropertyRef Name="productid" />
+      <PropertyRef Name="date" />
+      <PropertyRef Name="price" />
+    </Key>
+    <Property Name="productid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PRODUCT" Relationship="CMART6Model.FK_HISTORICAL_PRICE_PRODUCT" FromRole="HISTORICAL_PRICE" ToRole="PRODUCT" />
+  </EntityType>
+  <EntityType Name="IMPORTED_COUPON_BR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="imcouphqid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="accountid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="branch" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ACCOUNT" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_ACCOUNT" FromRole="IMPORTED_COUPON_BR" ToRole="ACCOUNT" />
+    <NavigationProperty Name="IMPORTED_COUPON_BR_DETAIL" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_IMPORTED_COUPON_BR" FromRole="IMPORTED_COUPON_BR" ToRole="IMPORTED_COUPON_BR_DETAIL" />
+    <NavigationProperty Name="IMPORTED_COUPON_HQ" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_IMPORTED_COUPON_HQ" FromRole="IMPORTED_COUPON_BR" ToRole="IMPORTED_COUPON_HQ" />
+  </EntityType>
+  <EntityType Name="IMPORTED_COUPON_BR_DETAIL">
+    <Key>
+      <PropertyRef Name="imcoupbrid" />
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="imcoupbrid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="productid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="IMPORTED_COUPON_BR" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_IMPORTED_COUPON_BR" FromRole="IMPORTED_COUPON_BR_DETAIL" ToRole="IMPORTED_COUPON_BR" />
+    <NavigationProperty Name="PRODUCT" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_PRODUCT" FromRole="IMPORTED_COUPON_BR_DETAIL" ToRole="PRODUCT" />
+  </EntityType>
+  <EntityType Name="IMPORTED_COUPON_HQ">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="proposedid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="accountid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="totalprice" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ACCOUNT" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_ACCOUNT" FromRole="IMPORTED_COUPON_HQ" ToRole="ACCOUNT" />
+    <NavigationProperty Name="IMPORTED_COUPON_BR" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_IMPORTED_COUPON_HQ" FromRole="IMPORTED_COUPON_HQ" ToRole="IMPORTED_COUPON_BR" />
+    <NavigationProperty Name="IMPORTED_COUPON_HQ_DETAIL" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_IMPORTED_COUPON_HQ" FromRole="IMPORTED_COUPON_HQ" ToRole="IMPORTED_COUPON_HQ_DETAIL" />
+    <NavigationProperty Name="PROPOSED_IMPORT_COUPON" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_PROPOSED_IMPORT_COUPON" FromRole="IMPORTED_COUPON_HQ" ToRole="PROPOSED_IMPORT_COUPON" />
+  </EntityType>
+  <EntityType Name="IMPORTED_COUPON_HQ_DETAIL">
+    <Key>
+      <PropertyRef Name="imcouphqid" />
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="imcouphqid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="productid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="IMPORTED_COUPON_HQ" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_IMPORTED_COUPON_HQ" FromRole="IMPORTED_COUPON_HQ_DETAIL" ToRole="IMPORTED_COUPON_HQ" />
+    <NavigationProperty Name="PRODUCT" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_PRODUCT" FromRole="IMPORTED_COUPON_HQ_DETAIL" ToRole="PRODUCT" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="supplierid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="producttypeid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="BILL_DETAIL" Relationship="CMART6Model.FK_BILL_DETAIL_PRODUCT" FromRole="PRODUCT" ToRole="BILL_DETAIL" />
+    <NavigationProperty Name="HISTORICAL_PRICE" Relationship="CMART6Model.FK_HISTORICAL_PRICE_PRODUCT" FromRole="PRODUCT" ToRole="HISTORICAL_PRICE" />
+    <NavigationProperty Name="IMPORTED_COUPON_BR_DETAIL" Relationship="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_PRODUCT" FromRole="PRODUCT" ToRole="IMPORTED_COUPON_BR_DETAIL" />
+    <NavigationProperty Name="IMPORTED_COUPON_HQ_DETAIL" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_PRODUCT" FromRole="PRODUCT" ToRole="IMPORTED_COUPON_HQ_DETAIL" />
+    <NavigationProperty Name="PRODUCT_TYPE" Relationship="CMART6Model.FK_PRODUCT_PRODUCT_TYPE" FromRole="PRODUCT" ToRole="PRODUCT_TYPE" />
+    <NavigationProperty Name="SUPPLIER" Relationship="CMART6Model.FK_PRODUCT_SUPPLIER" FromRole="PRODUCT" ToRole="SUPPLIER" />
+    <NavigationProperty Name="PROMO_INFO" Relationship="CMART6Model.FK_PROMO_INFO_PRODUCT" FromRole="PRODUCT" ToRole="PROMO_INFO" />
+    <NavigationProperty Name="PROPOSED_IMPORT_COUPON_DETAIL" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PRODUCT" FromRole="PRODUCT" ToRole="PROPOSED_IMPORT_COUPON_DETAIL" />
+  </EntityType>
+  <EntityType Name="PRODUCT_TYPE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PRODUCTs" Relationship="CMART6Model.FK_PRODUCT_PRODUCT_TYPE" FromRole="PRODUCT_TYPE" ToRole="PRODUCT" />
+  </EntityType>
+  <EntityType Name="PROMO_INFO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="producid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="startdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="promocontent" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="PRODUCT" Relationship="CMART6Model.FK_PROMO_INFO_PRODUCT" FromRole="PROMO_INFO" ToRole="PRODUCT" />
+  </EntityType>
+  <EntityType Name="PROPOSED_IMPORT_COUPON">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="supplierid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="accountid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ACCOUNT" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_ACCOUNT" FromRole="PROPOSED_IMPORT_COUPON" ToRole="ACCOUNT" />
+    <NavigationProperty Name="IMPORTED_COUPON_HQ" Relationship="CMART6Model.FK_IMPORTED_COUPON_HQ_PROPOSED_IMPORT_COUPON" FromRole="PROPOSED_IMPORT_COUPON" ToRole="IMPORTED_COUPON_HQ" />
+    <NavigationProperty Name="PROPOSED_IMPORT_COUPON_DETAIL" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PROPOSED_IMPORT_COUPON" FromRole="PROPOSED_IMPORT_COUPON" ToRole="PROPOSED_IMPORT_COUPON_DETAIL" />
+    <NavigationProperty Name="SUPPLIER" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_SUPPLIER" FromRole="PROPOSED_IMPORT_COUPON" ToRole="SUPPLIER" />
+  </EntityType>
+  <EntityType Name="PROPOSED_IMPORT_COUPON_DETAIL">
+    <Key>
+      <PropertyRef Name="proposedid" />
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="proposedid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="productid" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PRODUCT" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PRODUCT" FromRole="PROPOSED_IMPORT_COUPON_DETAIL" ToRole="PRODUCT" />
+    <NavigationProperty Name="PROPOSED_IMPORT_COUPON" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PROPOSED_IMPORT_COUPON" FromRole="PROPOSED_IMPORT_COUPON_DETAIL" ToRole="PROPOSED_IMPORT_COUPON" />
+  </EntityType>
+  <EntityType Name="SUPPLIER">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="house" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="street" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="township" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="mobile" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="PRODUCTs" Relationship="CMART6Model.FK_PRODUCT_SUPPLIER" FromRole="SUPPLIER" ToRole="PRODUCT" />
+    <NavigationProperty Name="PROPOSED_IMPORT_COUPON" Relationship="CMART6Model.FK_PROPOSED_IMPORT_COUPON_SUPPLIER" FromRole="SUPPLIER" ToRole="PROPOSED_IMPORT_COUPON" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TestTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="data" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_BILL_ACCOUNT">
+    <End Role="ACCOUNT" Type="CMART6Model.ACCOUNT" Multiplicity="1" />
+    <End Role="BILL" Type="CMART6Model.BILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACCOUNT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BILL">
+        <PropertyRef Name="accountid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_BR_ACCOUNT">
+    <End Role="ACCOUNT" Type="CMART6Model.ACCOUNT" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_BR" Type="CMART6Model.IMPORTED_COUPON_BR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACCOUNT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_BR">
+        <PropertyRef Name="accountid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_HQ_ACCOUNT">
+    <End Role="ACCOUNT" Type="CMART6Model.ACCOUNT" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_HQ" Type="CMART6Model.IMPORTED_COUPON_HQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACCOUNT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_HQ">
+        <PropertyRef Name="accountid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPOSED_IMPORT_COUPON_ACCOUNT">
+    <End Role="ACCOUNT" Type="CMART6Model.ACCOUNT" Multiplicity="1" />
+    <End Role="PROPOSED_IMPORT_COUPON" Type="CMART6Model.PROPOSED_IMPORT_COUPON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACCOUNT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PROPOSED_IMPORT_COUPON">
+        <PropertyRef Name="accountid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BILL_DETAIL_BILL">
+    <End Role="BILL" Type="CMART6Model.BILL" Multiplicity="1" />
+    <End Role="BILL_DETAIL" Type="CMART6Model.BILL_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BILL">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BILL_DETAIL">
+        <PropertyRef Name="billid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BILL_DETAIL_PRODUCT">
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="1" />
+    <End Role="BILL_DETAIL" Type="CMART6Model.BILL_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BILL_DETAIL">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HISTORICAL_PRICE_PRODUCT">
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="1" />
+    <End Role="HISTORICAL_PRICE" Type="CMART6Model.HISTORICAL_PRICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HISTORICAL_PRICE">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_BR_DETAIL_IMPORTED_COUPON_BR">
+    <End Role="IMPORTED_COUPON_BR" Type="CMART6Model.IMPORTED_COUPON_BR" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_BR_DETAIL" Type="CMART6Model.IMPORTED_COUPON_BR_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPORTED_COUPON_BR">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_BR_DETAIL">
+        <PropertyRef Name="imcoupbrid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_BR_IMPORTED_COUPON_HQ">
+    <End Role="IMPORTED_COUPON_HQ" Type="CMART6Model.IMPORTED_COUPON_HQ" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_BR" Type="CMART6Model.IMPORTED_COUPON_BR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPORTED_COUPON_HQ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_BR">
+        <PropertyRef Name="imcouphqid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_BR_DETAIL_PRODUCT">
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_BR_DETAIL" Type="CMART6Model.IMPORTED_COUPON_BR_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_BR_DETAIL">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_HQ_DETAIL_IMPORTED_COUPON_HQ">
+    <End Role="IMPORTED_COUPON_HQ" Type="CMART6Model.IMPORTED_COUPON_HQ" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_HQ_DETAIL" Type="CMART6Model.IMPORTED_COUPON_HQ_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPORTED_COUPON_HQ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_HQ_DETAIL">
+        <PropertyRef Name="imcouphqid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_HQ_PROPOSED_IMPORT_COUPON">
+    <End Role="PROPOSED_IMPORT_COUPON" Type="CMART6Model.PROPOSED_IMPORT_COUPON" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_HQ" Type="CMART6Model.IMPORTED_COUPON_HQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPOSED_IMPORT_COUPON">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_HQ">
+        <PropertyRef Name="proposedid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMPORTED_COUPON_HQ_DETAIL_PRODUCT">
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="1" />
+    <End Role="IMPORTED_COUPON_HQ_DETAIL" Type="CMART6Model.IMPORTED_COUPON_HQ_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IMPORTED_COUPON_HQ_DETAIL">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCT_PRODUCT_TYPE">
+    <End Role="PRODUCT_TYPE" Type="CMART6Model.PRODUCT_TYPE" Multiplicity="1" />
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT_TYPE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PRODUCT">
+        <PropertyRef Name="producttypeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCT_SUPPLIER">
+    <End Role="SUPPLIER" Type="CMART6Model.SUPPLIER" Multiplicity="1" />
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUPPLIER">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PRODUCT">
+        <PropertyRef Name="supplierid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROMO_INFO_PRODUCT">
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="1" />
+    <End Role="PROMO_INFO" Type="CMART6Model.PROMO_INFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PROMO_INFO">
+        <PropertyRef Name="producid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPOSED_IMPORT_COUPON_DETAIL_PRODUCT">
+    <End Role="PRODUCT" Type="CMART6Model.PRODUCT" Multiplicity="1" />
+    <End Role="PROPOSED_IMPORT_COUPON_DETAIL" Type="CMART6Model.PROPOSED_IMPORT_COUPON_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PROPOSED_IMPORT_COUPON_DETAIL">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPOSED_IMPORT_COUPON_DETAIL_PROPOSED_IMPORT_COUPON">
+    <End Role="PROPOSED_IMPORT_COUPON" Type="CMART6Model.PROPOSED_IMPORT_COUPON" Multiplicity="1" />
+    <End Role="PROPOSED_IMPORT_COUPON_DETAIL" Type="CMART6Model.PROPOSED_IMPORT_COUPON_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPOSED_IMPORT_COUPON">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PROPOSED_IMPORT_COUPON_DETAIL">
+        <PropertyRef Name="proposedid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPOSED_IMPORT_COUPON_SUPPLIER">
+    <End Role="SUPPLIER" Type="CMART6Model.SUPPLIER" Multiplicity="1" />
+    <End Role="PROPOSED_IMPORT_COUPON" Type="CMART6Model.PROPOSED_IMPORT_COUPON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUPPLIER">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PROPOSED_IMPORT_COUPON">
+        <PropertyRef Name="supplierid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

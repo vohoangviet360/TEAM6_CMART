@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b8f92bd74dd4ae396d0ec83780aec3d" Name="Diagram1">
+        <EntityTypeShape EntityType="CMART6Model.ACCOUNT" Width="1.5" PointX="9" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.BILL" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.BILL_DETAIL" Width="1.5" PointX="8.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.HISTORICAL_PRICE" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.IMPORTED_COUPON_BR" Width="1.5" PointX="13.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.IMPORTED_COUPON_BR_DETAIL" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.IMPORTED_COUPON_HQ" Width="1.5" PointX="11.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.IMPORTED_COUPON_HQ_DETAIL" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.PRODUCT" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.PRODUCT_TYPE" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.PROMO_INFO" Width="1.5" PointX="5.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.PROPOSED_IMPORT_COUPON" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.PROPOSED_IMPORT_COUPON_DETAIL" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.SUPPLIER" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CMART6Model.TestTable" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CMART6Model.FK_BILL_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_BR_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_HQ_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_BILL_DETAIL_BILL" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_BILL_DETAIL_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_HISTORICAL_PRICE_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_IMPORTED_COUPON_BR" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_BR_IMPORTED_COUPON_HQ" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_BR_DETAIL_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_IMPORTED_COUPON_HQ" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_HQ_PROPOSED_IMPORT_COUPON" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_IMPORTED_COUPON_HQ_DETAIL_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PRODUCT_PRODUCT_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PRODUCT_SUPPLIER" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PROMO_INFO_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_DETAIL_PROPOSED_IMPORT_COUPON" ManuallyRouted="false" />
+        <AssociationConnector Association="CMART6Model.FK_PROPOSED_IMPORT_COUPON_SUPPLIER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
